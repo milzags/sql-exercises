@@ -33,11 +33,11 @@ INSERT INTO vehicles (make, model, year, price, owner_id) VALUES ('BMW', '700', 
 
 
 -- question 1 answer --
--- SELECT * FROM owners FULL JOIN vehicles ON owners.id = vehicles.owner_id; --
+SELECT * FROM owners FULL JOIN vehicles ON owners.id = vehicles.owner_id; --
 
 --question 2 answer --
--- SELECT first_name, last_name, COUNT(owner_id) as count FROM owners JOIN vehicles ON owners.id = vehicles.owner_id GROUP BY owners.id ORDER BY count ASC; --
+SELECT first_name, last_name, COUNT(owner_id) as count FROM owners JOIN vehicles ON owners.id = vehicles.owner_id GROUP BY owners.id ORDER BY count ASC; --
 
 --question 3 answer --
--- SELECT first_name, last_name, AVG(price) as average_price, COUNT(owner_id) FROM owners JOIN vehicles ON owner.id = vehicles.owner_id GROUP BY first_name, last_name HAVING COUUNT(owner_id) > 1 AND AVG(price) > 10000 ORDER BY first_name DESC;--
+SELECT first_name, last_name, AVG(price) as average_price, COUNT(owner_id) FROM owners JOIN vehicles ON owner.id = vehicles.owner_id GROUP BY first_name, last_name HAVING COUNT(owner_id) > 1 AND AVG(price) > 10000 ORDER BY first_name DESC;--
 
